@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Lista PIX</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #586e26;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .pix-item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .pix-item {
+            background-color: #FFF0F5;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+            border: 1px solid #FFE4E1;
+        }
+
+        .pix-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .pix-item h3 {
+            color: #586e26;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .pix-item p {
+            margin: 5px 0 15px;
+        }
+
+        .pix-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .pix-button:hover {
+            background-color: #45a049;
+        }
+
+        .observacao {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #eee;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>PIX dos Noivos: Maisa e Nicolas!</h1>
+
+    <div class="intro">
+        <p>
+            Ao invés de presentes tradicionais, criamos uma <strong>lista de cotas PIX</strong> para nossa Lua de Mel e para celebrar esse momento juntos. Você escolhe o item, clica no botão e contribui com o valor correspondente!
+        </p>
+        <p style="font-weight: bold; color: #586e26;">
+            Lembre-se: O valor é uma sugestão. Fique à vontade para contribuir com o que seu coração mandar!
+        </p>
+    </div>
+
+    <div class="pix-item-grid">
+
+        <div class="pix-item">
+            <img src="../CASAMENTO/imgpix/Auxílio para obra parada.jpg" alt="Auxilio Para Obra Parada" style="width: 100%; border-radius: 8px;">
+            <h3>Auxilio Para Obra Parada</h3>
+            <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 98,00</p>
+            <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('98,00', 'Para Que Gastar Tanto')">Presentear</a>
+        </div>
+
+        <div class="pix-item">
+            <img src="../CASAMENTO/imgpix/Se pix fosse abraço, esse seria bem apertado.jpg" alt="Se pix fosse abraço, esse seria bem apertado" style="width: 110%; border-radius: 8px;">
+            <h3>Se pix fosse abraço, esse seria bem apertado 🤣😭</h3>
+            <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 150,00</p>
+            <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a"
+               class="pix-button" target="_blank" rel="noopener noreferrer">
+                Presentear
+            </a>
+        </div>
+
+        <div class="pix-item">
+            <img src="../CASAMENTO/imgpix/Comprar caneca preferida do noivo.jpg" alt="Comprar caneca preferida do noivo" style="width: 100%; border-radius: 8px;">
+            <h3>Comprar caneca preferida do noivo</h3>
+            <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 120,00</p>
+            <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('120,00', 'Comprar caneca preferida do noivo')">Presentear</a>
+        </div>
+
+        <div class="pix-item">
+            <img src="../CASAMENTO/imgpix/Maracujina para os noivos.jpg" alt="Maracujina para os noivos" style="width: 100%; border-radius: 8px;">
+            <h3>Maracujina para os noivos</h3>
+            <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 80,00</p>
+            <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('80,00', 'Maracujina para os noivos')">Presentear</a>
+        </div>
+
+        <div class="pix-item">
+            <img src="../CASAMENTO/imgpix/Para não dizer que não dei nada.jpg" alt="Para não dizer que não dei nada" style="width: 100%; border-radius: 8px;">
+            <h3>Para não dizer que não dei nada</h3>
+            <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 50,30</p>
+            <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('50,30', 'Para não dizer que não dei nada')">Presentear</a>
+        </div>
+
+        <div class="pix-item">
+            <img src="../CASAMENTO/imgpix/Despertador para a noiva não atrasar.jpg" alt="Despertador para a noiva não atrasar" style="width: 100%; border-radius: 8px;">
+            <h3>Despertador para a noiva não atrasar</h3>
+            <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 160,00</p>
+            <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('160,00', 'Despertador para a noiva não atrasar')">Presentear</a>
+        </div>
+
+         <div class="pix-item">
+            <img src="../CASAMENTO/imgpix/Comprar lenço para noiva.jpg" alt="Comprar lenço para noiva" style="width: 100%; border-radius: 8px;">
+            <h3>Comprar lenço para noiva</h3>
+            <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 100,00</p>
+            <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('100,00', 'Comprar lenço para noiva')">Presentear</a>
+        </div>
+
+            <div class="pix-item">
+                <img src="../CASAMENTO/imgpix/Rolo de macarrão caso o noivo não se comporte.jpg" alt="Rolo de macarrão caso o noivo não se comporte" style="width: 100%; border-radius: 8px;">
+                <h3>Rolo de macarrão caso o noivo não se comporte</h3>
+                <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 115,00</p>
+                <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('115,00', 'Rolo de macarrão caso o noivo não se comporte')">Presentear</a>
+            </div>
+
+            <div class="pix-item">
+                <img src="../CASAMENTO/imgpix/Capacete para o noivo se proteger do rolo de macarrão.jpg" alt="Capacete para o noivo se proteger do rolo de macarrão" style="width: 100%; border-radius: 8px;">
+                <h3>Capacete para o noivo se proteger do rolo de macarrão</h3>
+                <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 105,00</p>
+                <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('105,00', 'Capacete para o noivo se proteger do rolo de macarrão')">Presentear</a>
+            </div>
+
+            <div class="pix-item">
+                <img src="../CASAMENTO/imgpix/Não é muito, mas é sincero.jpg" alt="Não é muito, mas é sincero" style="width: 100%; border-radius: 8px;">
+                <h3>Não é muito, mas é sincero</h3>
+                <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 75,00</p>
+                <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('75,00', 'Não é muito, mas é sincero')">Presentear</a>
+            </div>
+
+            <div class="pix-item">
+                <h3>Ajude a pagar o cartão</h3>
+                <img src="../CASAMENTO/imgpix/ajuda a pagar o cartao 2.png" alt="Ajude a pagar o cartão" style="width: 110%; border-radius: 8px;">
+                <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 55,00</p>
+                <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('55,00', 'Ajude a pagar o cartão')">Presentear</a>
+            </div>
+
+            <div class="pix-item">
+                <img src="../CASAMENTO/imgpix/Para comprar a camisa favorita do noivo.png" alt="Para comprar a camisa favorita do noivo" style="width: 100%; border-radius: 8px;">
+                <h3>Para comprar a camisa favorita do noivo</h3>
+                <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">R$ 50,00</p>
+                <a href="https://nubank.com.br/cobrar/asht0/68efe26b-ae67-4300-8745-5e509321bc8a" class="pix-button" onclick="copiarPix('50,00', 'Para comprar a camisa favorita do noivo')">Presentear</a>
+            </div>
+    </div>
+
+    <div class="observacao">
+        <p>Chave PIX: <strong>91981893065</strong></p>
+        <p>Nome: <strong>Kessi Nicolas dos Santos Bentes</strong></p>
+        <p>Banco: <strong>Nu Pagamentos S.A. (260)</strong></p>
+        <p>Ou clique em "Presentear" para ser direcionado à página de pagamento ou copiar a chave PIX.</p>
+        <p>Obrigado por fazer parte desse momento tão especial em nossas vidas!</p>
+    </div>
+</div>
+
+<script>
+    function copiarPix(valor, descricao) {
+        const chavePix = "91981893065";
+        navigator.clipboard.writeText(chavePix).then(() => {
+            alert(`Você escolheu "${descricao}" (R$ ${valor}). A chave PIX foi copiada para a área de transferência!\n\nAgora é só colar no app do seu banco.`);
+        }).catch(err => {
+            alert("Não foi possível copiar a chave PIX. Por favor, copie manualmente: " + chavePix);
+        });
+    }
+</script>
+
+</body>
+</html>
