@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Casamento - Maisa & Nicolas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Maisa & Nicolas</h1>
+            <p>Convidam para a celebração do seu casamento</p>
+            <p class="date">26 de Setembro de 2026</p>
+        </div>
+    </header>
+
+    <section class="audio-section">
+        <audio preload="metadata" controls autoplay loop>
+            <source src="tantan lorena pozza.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+<!-- Adicione aqui o carrossel -->
+<section class="carousel">
+    <div class="carousel-container">
+        <img src="savdate.jpeg" alt="Foto 1" class="carousel-image active">
+        <img src="flores.jpeg" alt="Foto 2" class="carousel-image">
+        <img src="casal.jpeg" alt="Foto 3" class="carousel-image">
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+    </div>
+    <div class="carousel-dots"></div>
+</section>
+
+    <main>
+        <section class="details">
+            <h2>Detalhes do Evento</h2>
+            <div class="details-grid">
+                <div class="card">
+                    <h3>Cerimônia</h3>
+                    <p><strong>Horário:</strong> 16:00</p>
+                    <p><strong>Local:</strong> Igreja</p>
+                    <p><strong>Endereço:</strong> Rua Liberio Monteiro, 532 - Laudelino Freire, Lagarto - SE</p>
+                </div>
+                <div class="card">
+                    <h3>Recepção</h3>
+                    <p><strong>Horário:</strong> 18:00</p>
+                    <p><strong>Local:</strong> Salão de Festas Requinte</p>
+                    <p><strong>Endereço:</strong> Av. Liberio Monteiro, 532, Laudelino Freire, Lagarto - SE</p>
+                </div>
+                <div class="card">
+                    <h3>Sugestões de Presentes</h3>
+                    <p><strong>Sua presença é o nosso maior presente!</strong></p>
+                    <p>Mas, se desejar nos presentear, clique aqui.</p>
+                    <a href="pix.html" target="_blank" rel="noopener noreferrer" class="button" style="display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #586e26; color: white; text-decoration: none; border-radius: 5px;">Clique aqui</a>
+                </div>
+
+        <section class="rsvp">
+            <div class="card">
+            <h2>Confirme sua Presença</h2>
+            <p>Por favor, confirme sua presença até 23/08/2026.</p>
+            <form id="rsvp-form">
+                <input type="text" id="guest-name" name="guest-name" placeholder="Seu nome completo" required>
+                <select id="attendance" name="attendance" required>
+                    <option value="">Você irá ao evento? Clique aqui</option>
+                    <option value="sim">Sim, estarei lá!</option>
+                    <option value="nao">Não poderei comparecer.</option>
+                </select>
+                <button type="submit">Enviar Confirmação</button>
+            </form>
+            <p id="confirmation-message" class="hidden"></p>
+            </div>
+        </section>
+
+        
+</div>
+</section>
+
+
+    <footer>
+        <p>Feito com ❤️ por Maisa & Nicolas</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+// Substitua pelo seu número do WhatsApp (exemplo: 5511999999999)
+const whatsappNumber = "+5579981023554";
+
+document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nome = document.getElementById('guest-name').value;
+    const presenca = document.getElementById('attendance').value;
+    let mensagem = `Olá! Meu nome é ${nome} e gostaria de confirmar minha presença: `;
+    mensagem += presenca === "sim" ? "Sim, estarei lá!" : "Não poderei comparecer.";
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+});
+    </script>
+
+</body>
+</html>
