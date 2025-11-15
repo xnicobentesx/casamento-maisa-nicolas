@@ -63,15 +63,15 @@
         <section class="rsvp">
             <div class="card">
             <h2>Confirme sua Presença</h2>
-            <p>Por favor, confirme sua presença até 23/08/2026.</p>
+            <p><strong>Por favor, confirme sua presença até 23/08/2026.</strong></p>
             <form id="rsvp-form">
-                <input type="text" id="guest-name" name="guest-name" placeholder="Seu nome completo" required>
-                <select id="attendance" name="attendance" required>
+                <input type="text" id="guest-name" name="guest-name" placeholder="Seu nome completo" required style="padding: 10px 20px;">
+                <select id="attendance" name="attendance" required style="padding: 10px 20px;">
                     <option value="">Você irá ao evento? Clique aqui</option>
                     <option value="sim">Sim, estarei lá!</option>
                     <option value="nao">Não poderei comparecer.</option>
                 </select>
-                <button type="submit">Enviar Confirmação</button>
+                <button type="submit" style="margin-top: 15px; padding: 10px 20px; background-color: #586e26; color: white; text-decoration: none; border-radius: 5px;">Enviar Confirmação</button>
             </form>
             <p id="confirmation-message" class="hidden"></p>
             </div>
@@ -104,3 +104,4 @@ document.getElementById('rsvp-form').addEventListener('submit', function(e) {
 
 </body>
 </html>
+
